@@ -15,4 +15,10 @@
     <ProjectReference Include="..\FC.Codeflix.Catalog.Domain\FC.Codeflix.Catalog.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Video\Common\" />
+    <Folder Include="UseCases\Video\CreateVideo\" />
+    <Folder Include="UseCases\Video\UpdateVdieo\" />
+  </ItemGroup>
+
 </Project>

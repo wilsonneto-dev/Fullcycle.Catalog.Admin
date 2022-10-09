@@ -6,6 +6,7 @@ using FC.Codeflix.Catalog.Domain.Validator;
 using FC.Codeflix.Catalog.Domain.ValueObject;
 
 namespace FC.Codeflix.Catalog.Domain.Entity;
+
 public class Video : AggregateRoot
 {
     public string Title { get; private set; }
