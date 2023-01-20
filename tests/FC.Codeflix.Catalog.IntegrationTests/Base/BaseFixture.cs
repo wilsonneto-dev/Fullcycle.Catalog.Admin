@@ -14,11 +14,15 @@ public class BaseFixture
     {
         var context = new CodeflixCatalogDbContext(
             new DbContextOptionsBuilder<CodeflixCatalogDbContext>()
-            .UseInMemoryDatabase("integration-tests-db")
+            .UseSqlServer(@"Server=localhost;Database=company02;User Id=sa;Password=Str0ngP455W0RD;trustServerCertificate=true;")
+            //.UseInMemoryDatabase("ok")
             .Options
         );
         if (preserveData == false)
+        {
             context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+        }
         return context;
     }
 }

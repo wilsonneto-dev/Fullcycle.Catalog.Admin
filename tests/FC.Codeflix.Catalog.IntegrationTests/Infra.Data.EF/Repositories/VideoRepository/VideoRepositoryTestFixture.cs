@@ -114,7 +114,7 @@ public class VideoRepositoryTestFixture : BaseFixture
     public Video GetValidVideoWithAllProperties()
     {
         var video = new Video(
-            GetValidTitle(),
+            $"opa - {DateTime.Now.ToString("H:m")}",
             GetValidDescription(),
             GetValidYearLaunched(),
             GetRandomBoolean(),

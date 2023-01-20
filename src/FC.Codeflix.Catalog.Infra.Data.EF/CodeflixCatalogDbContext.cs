@@ -35,5 +35,7 @@ public class CodeflixCatalogDbContext
         builder.ApplyConfiguration(new VideosCategoriesConfiguration());
         builder.ApplyConfiguration(new VideosGenresConfiguration());
         builder.ApplyConfiguration(new VideosCastMembersConfiguration());
+
+        builder.Entity<Media>(x => x.Property(x => x.Id).ValueGeneratedNever());
     }
 }
